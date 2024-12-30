@@ -10,9 +10,9 @@ export default function Hero() {
           {/* Hero content */}
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="h1 font-sans mb-6" data-aos="fade-up">
-              Duis aute irure dolor in{' '}
+              DocuSegment{' '}
               <span className="relative inline-flexh2 bg-clip-text text-transparent bg-gradient-to-tr from-indigo-500 via-sky-300 to-slate-200 pb-6">
-                Dolor
+                .AI
               </span>
             </h1>
             <p
@@ -20,9 +20,9 @@ export default function Hero() {
               data-aos="fade-up"
               data-aos-delay="100"
             >
-              Quisque molestie finibus nibh, in luctus felis scelerisque a.
-              Nullam pharetra condimentum dui, sit amet laoreet mi convallis
-              vitae.
+              Transformez instantanément vos documents en données structurées
+              grâce à l'IA. Une solution puissante qui segmente automatiquement
+              vos documents pour une analyse intelligente et précise.
             </p>
             <div
               className="max-w-xs mx-auto sm:max-w-none sm:inline-flex sm:justify-center space-y-4 sm:space-y-0 sm:space-x-4"
@@ -32,7 +32,7 @@ export default function Hero() {
               <div>
                 <Link
                   className="btn text-white bg-indigo-500 hover:bg-indigo-600 w-full shadow-sm group"
-                  href="/signup"
+                  href="#"
                 >
                   Get Started Free
                 </Link>
@@ -40,7 +40,7 @@ export default function Hero() {
               <div>
                 <a
                   className="btn text-slate-300 bg-slate-700 hover:bg-slate-600 border-slate-600 w-full shadow-sm"
-                  href="#0"
+                  href="#"
                 >
                   Read Docs
                 </a>

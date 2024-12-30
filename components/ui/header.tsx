@@ -11,13 +11,19 @@ export default function Header({ nav = true }: { nav?: boolean }) {
           <div className="shrink-0 mr-4">
             {/* Logo */}
             <Link className="block" href="/" aria-label="pancaronadev">
-              <Image
+            <div className="mt-8 text-2xl  mb-6 font-bold" data-aos="fade-up">
+              DocuSegment{' '}
+              <span className="relative inline-flex bg-clip-text text-transparent bg-gradient-to-tr from-indigo-500 via-sky-300 to-slate-200 pb-6">
+                .AI
+              </span>
+              </div>
+              {/* <Image
                 className=""
                 src={Logo}
                 width={40}
                 height={40}
                 alt="Logo"
-              />
+              /> */}
             </Link>
           </div>
           {/* Desktop navigation */}
@@ -25,14 +31,14 @@ export default function Header({ nav = true }: { nav?: boolean }) {
             <nav className="flex grow">
               {/* Desktop sign in links */}
               <ul className="flex grow justify-end flex-wrap items-center">
-                <li>
+                {/* <li>
                   <Link
                     className="font-medium text-slate-800 hover:text-slate-500 px-3 lg:px-5 py-2 flex items-center transition duration-150 ease-in-out"
                     href="/signin"
                   >
                     Sign in
                   </Link>
-                </li>
+                </li> */}
                 <li className="ml-3">
                   <Link
                     className="btn-sm text-white bg-indigo-500 hover:bg-indigo-600 w-full shadow-sm group"
