@@ -32,9 +32,9 @@ export default function Hero() {
               <div>
                 <Link
                   className="btn text-white bg-indigo-500 hover:bg-indigo-600 w-full shadow-sm group"
-                  href="#"
+                  href="/segmentPage"
                 >
-                  Get Started Free
+                  Get Started 
                 </Link>
               </div>
               <div>

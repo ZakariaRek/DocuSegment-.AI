@@ -1,155 +1,124 @@
-'use client';
 
-import { useEffect } from 'react';
 import Image from 'next/image';
-import Illustration from '@/public/images/features-illustration.svg';
+import { FaLinkedin } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 
-// Import Swiper
-import Swiper, { Autoplay, Navigation } from 'swiper';
-import 'swiper/swiper.min.css';
-Swiper.use([Autoplay, Navigation]);
-
-// Array of carousel items
-const features = [
+// Define the collaborators data
+const projectInfo = [
   {
-    img: '/images/features-icon-01.svg',
-    title: 'Collaboration',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.',
+    type: 'project',
+    title: 'Project Repository',
+    img: '/api/placeholder/56/56',
+    githubUrl: 'https://github.com/ZakariaRek/DocuSegment-.AI',
+    description: 'Check out our project source code and documentation on GitHub.',
   },
   {
-    img: '/images/features-icon-02.svg',
-    title: 'Experiences',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.',
+    type: 'collaborator',
+    name: 'Rekhla Zakaria',
+    role: 'Full-Stack Developer',
+    img: '/public/1.jpg',
+    githubUrl: 'https://github.com/ZakariaRek',
+    linkedinUrl: 'https://www.linkedin.com/in/zakaria-rekhla-2116a72a1/',
   },
   {
-    img: '/images/features-icon-03.svg',
-    title: 'Animation',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.',
-  },
-  {
-    img: '/images/features-icon-04.svg',
-    title: 'Modeling',
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.',
+    type: 'collaborator',
+    name: 'Hadadia Saad',
+    role: 'Full-Stack Developer',
+    img: '/public/2.jpg',
+    githubUrl: 'https://github.com/SaadHadadia',
+    linkedinUrl: 'https://www.linkedin.com/in/saad-hadadia-2b1686275?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
   },
 ];
 
 export default function Features() {
-  useEffect(() => {
-    const carousel = new Swiper('.carousel', {
-      breakpoints: {
-        320: {
-          slidesPerView: 1,
-        },
-        640: {
-          slidesPerView: 2,
-        },
-        1024: {
-          slidesPerView: 3,
-        },
-      },
-      grabCursor: true,
-      loop: false,
-      centeredSlides: false,
-      initialSlide: 0,
-      spaceBetween: 24,
-      autoplay: {
-        delay: 7000,
-      },
-      navigation: {
-        nextEl: '.carousel-next',
-        prevEl: '.carousel-prev',
-      },
-    });
-  }, []);
-
   return (
     <section className="relative">
-      {/* Bg illustration */}
-      <div
-        className="absolute left-1/2 -translate-x-1/2 pointer-events-none -mt-20 -z-10"
-        aria-hidden="true"
-      >
-        <Image
-          src={Illustration}
-          className="max-w-none"
-          width={1440}
-          height={440}
-          alt="Illustration"
-        />
-      </div>
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="py-12 md:py-20">
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
-            <h2 className="h2 font-sans mb-4">Lorem ipsum dolor sit amet</h2>
+            <h2 className="text-3xl font-bold mb-4">Document Segmentation with YoloV10</h2>
             <div className="max-w-2xl mx-auto">
               <p className="text-xl text-slate-500">
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                qui officia deserunt mollit anim id est.
+                Meet our team and explore our project repository
               </p>
             </div>
           </div>
-          {/* Carousel */}
-          <div className="carousel swiper-container">
-            <div className="swiper-wrapper">
-              {features.map((feature, index) => (
-                <div
-                  key={index}
-                  className="swiper-slide h-auto flex flex-col bg-slate-200 p-6 rounded drop-shadow-md"
-                >
-                  <Image
-                    className="mb-3"
-                    src={feature.img}
-                    width={56}
-                    height={56}
-                    alt={feature.title}
-                  />
-                  <div className="grow">
-                    <div className="font-sans font-bold text-xl">
-                      {feature.title}
-                    </div>
-                    <div className="text-slate-500 mb-3">
-                      {feature.description}
-                    </div>
-                  </div>
-                  <div className="text-right">
-                    <a
-                      className="font-medium text-indigo-500 inline-flex items-center transition duration-150 ease-in-out group"
-                      href="#0"
-                    >
-                      Learn More{' '}
-                    </a>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-          {/* Navigation Arrows */}
-          <div className="flex mt-12 space-x-4 justify-end">
-            <button className="carousel-prev relative z-20 w-14 h-14 rounded-full flex items-center justify-center group border border-slate-400 hover:bg-slate-300 transition duration-150 ease-in-out">
-              <span className="sr-only">Previous</span>
-              <svg
-                className="w-4 h-4 fill-slate-400 transition duration-150 ease-in-out"
-                viewBox="0 0 16 16"
-                xmlns="http://www.w3.org/2000/svg"
+
+          {/* Cards Grid */}
+          <div className="grid md:grid-cols-3 gap-6">
+            {projectInfo.map((item, index) => (
+              <div
+                key={index}
+                className="flex flex-col bg-slate-100 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300"
               >
-                <path d="M6.7 14.7l1.4-1.4L3.8 9H16V7H3.8l4.3-4.3-1.4-1.4L0 8z" />
-              </svg>
-            </button>
-            <button className="carousel-next relative z-20 w-14 h-14 rounded-full flex items-center justify-center group border border-slate-400 hover:bg-slate-300 transition duration-150 ease-in-out">
-              <span className="sr-only">Next</span>
-              <svg
-                className="w-4 h-4 fill-slate-400 transition duration-150 ease-in-out"
-                viewBox="0 0 16 16"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M9.3 14.7l-1.4-1.4L12.2 9H0V7h12.2L7.9 2.7l1.4-1.4L16 8z" />
-              </svg>
-            </button>
+                {/* Project Card */}
+                {item.type === 'project' && (
+                  <>
+                    <div className="flex items-center justify-center mb-4">
+                      {/* <Github className='bg-black' size={48} /> */}
+                      <FaGithub size={48} />
+
+                    </div>
+                    <h3 className="text-xl font-bold text-center mb-3">{item.title}</h3>
+                    <p className="text-slate-600 mb-4 text-center">{item.description}</p>
+                    <div className="mt-auto text-center">
+                      <a
+                        href={item.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center px-4 py-2 bg-slate-800 text-white rounded-md hover:bg-slate-700 transition-colors duration-300"
+                      >
+                        <FaGithub className="mr-2" size={20} />
+
+                        {/* <Github className="mr-2" size={20} /> */}
+                        View Repository
+                      </a>
+                    </div>
+                  </>
+                )}
+
+                {/* Collaborator Card */}
+                {item.type === 'collaborator' && (
+                  <>
+                    <div className="flex flex-col items-center mb-4">
+                      <Image
+                        src={item.img}
+                        width={120}
+                        height={120}
+                        alt={item.name || ''}
+                        className="rounded-full mb-3"
+                      />
+                      <h3 className="text-xl font-bold">{item.name}</h3>
+                      <p className="text-slate-600 font-medium">{item.role}</p>
+                    </div>
+                    <p className="text-slate-600 text-center mb-4">{item.description}</p>
+                    <div className="mt-auto flex justify-center space-x-4">
+                      <a
+                        href={item.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-2 text-slate-600 hover:text-slate-900"
+                      >
+                        {/* <Github size={24} /> */}
+                        <FaGithub size={24} />
+
+                      </a>
+                      <a
+                        href={item.linkedinUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-2 text-slate-600 hover:text-slate-900"
+                      >
+                        {/* <Linkedin  size={24} /> */}
+                        <FaLinkedin size={24}  color='sky-blue'/>
+
+                      </a>
+                    </div>
+                  </>
+                )}
+              </div>
+            ))}
           </div>
         </div>
       </div>
