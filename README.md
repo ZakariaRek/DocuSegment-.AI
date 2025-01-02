@@ -1,6 +1,6 @@
 # Next.js 15 Landing Page Saas Template
 
-![Next.js Template](public/shot.png)
+![Next.js Template](public/Shot.jpeg)
 
 This is a **Next.js 15** template built with **Tailwind CSS**, designed for SaaS platforms, freelancers, and other modern web applications. The template is fully responsive, fast, and optimized for SEO.
 
