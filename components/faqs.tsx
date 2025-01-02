@@ -2,56 +2,61 @@ export default function Faqs() {
   // Array of FAQ items
   const faqs = [
     {
-      question:
-        'Nullam laoreet lacus a lectus dignissim, vel ultrices lorem mattis',
+      question: 'What is DocuSegment.AI and how does it work?',
       answer:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam.',
+        'DocuSegment.AI is an advanced document analysis system that uses YOLOv10 for text detection and segmentation. It automatically identifies and extracts text from documents, analyzes document layouts, and classifies different types of documents with high accuracy.',
     },
     {
-      question:
-        'Pellentesque habitant morbi tristique senectus et netus et malesuada',
+      question: 'What types of documents can be processed?',
       answer:
-        'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.',
+        'Our system can process a wide range of documents including printed text, handwritten notes, forms, invoices, receipts, and complex layouts. The AI model is trained to handle various document formats and styles.',
     },
     {
-      question:
-        'Vestibulum ante ipsum primis in faucibus orci luctus et ultrices',
+      question: 'How accurate is the text detection system?',
       answer:
-        'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+        'Our YOLOv10-based text detection system achieves high accuracy rates thanks to advanced deep learning techniques. The system is continuously improved through training on diverse document datasets and real-world applications.',
     },
     {
-      question: 'Cras vehicula nisi id aliquet tincidunt',
+      question: 'What are the technical requirements for using DocuSegment.AI?',
       answer:
-        'Curabitur eget velit orci. Nam quis mauris sit amet metus vehicula faucibus sed sit amet nunc.',
+        'The system can be run on most modern computers with Python support. For optimal performance, we recommend using a system with GPU capabilities. Detailed technical requirements and setup instructions are available in our GitHub repository.',
     },
     {
-      question: 'Integer id sapien nec ipsum gravida fermentum',
+      question: 'Is the project open source and can I contribute?',
       answer:
-        'Morbi scelerisque, nisi id tincidunt tincidunt, ligula lorem varius libero, ut egestas libero nulla eget tortor.',
+        'Yes, DocuSegment.AI is open source and available on GitHub. We welcome contributions from the community, whether it\'s improving the code, adding new features, or helping with documentation. Check our contribution guidelines on GitHub.',
     },
     {
-      question: 'Suspendisse a nulla sit amet purus blandit luctus',
+      question: 'How can I get started with DocuSegment.AI?',
       answer:
-        'Proin tincidunt, augue non vestibulum aliquam, arcu tortor blandit dolor, a tincidunt mi felis nec libero.',
+        'You can get started by cloning our GitHub repository and following the setup instructions in our documentation. We provide example code and test datasets to help you understand and implement the system. For any questions, feel free to open an issue on GitHub.',
     },
   ];
 
   return (
-    <section>
+    <section className="bg-slate-100">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="py-12 md:py-20">
+        <div className="py-12 md:py-20 ">
           {/* Section header */}
           <div className="pb-12 md:pb-20">
-            <h2 className="h2 font-sans">FAQs</h2>
+            <h2 className="text-3xl font-bold text-slate-800">Frequently Asked Questions</h2>
+            <p className="mt-4 text-lg text-slate-600">
+              Common questions about DocuSegment.AI and document analysis
+            </p>
           </div>
           {/* Grid layout for FAQs */}
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="grid md:grid-cols-2 gap-12 from-slate-150 to-slate-50">
             {faqs.map((faq, index) => (
-              <div key={index} className="space-y-2">
-                <h4 className="text-xl font-sans font-medium">
+              <div 
+                key={index} 
+                className="space-y-2 p-6 bg-slate-200 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300"
+              >
+                <h4 className="text-xl font-medium text-slate-800">
                   {faq.question}
                 </h4>
-                <p className="text-slate-500">{faq.answer}</p>
+                <p className="text-slate-600 leading-relaxed">
+                  {faq.answer}
+                </p>
               </div>
             ))}
           </div>

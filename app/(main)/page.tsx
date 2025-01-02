@@ -19,7 +19,7 @@ export default function Home() {
       <Features02 />
       <FaeturedProjects />
       <Faqs />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Cta />
     </>
   );

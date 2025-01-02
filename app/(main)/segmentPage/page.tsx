@@ -14,10 +14,10 @@ import DragDrop from '@/components/ui/DargDrop';
   
   export default function SegmentPage() {
     return (
-      <>
+      <div>
         <DragDrop/>
-        <Cta />
-      </>
+        {/* <Cta /> */}
+      </div>
     );
   }
   

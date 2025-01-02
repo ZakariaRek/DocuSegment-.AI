@@ -12,7 +12,7 @@ export default function Features02() {
     <section className="relative border-t border-slate-300">
       {/* Bg gradient: top */}
       <div
-        className="absolute top-0 left-0 right-0 bg-gradient-to-b from-indigo-700 to-transparent opacity-25 h-[25rem] pointer-events-none -z-10"
+        className="absolute top-0 left-0 right-0 bg-gradient-to-b from-slate-700 to-transparent opacity-25 h-[25rem] pointer-events-none -z-10"
         aria-hidden="true"
       />
       {/* Illustration */}
@@ -25,7 +25,7 @@ export default function Features02() {
           className="max-w-none"
           width="1440"
           height="453"
-          alt="Features 02 Illustration"
+          alt="Features Illustration"
         />
       </div>
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -33,11 +33,11 @@ export default function Features02() {
           {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
             <h2 className="h2 font-sans">
-              Corporis temporibus maiores providents
+              Advanced Document Analysis Features
             </h2>
           </div>
           {/* Box */}
-          <div className="bg-indigo-200 drop-shadow-md bg-opacity-60 rounded overflow-hidden">
+          <div className="bg-slate-200 drop-shadow-md bg-opacity-60 rounded overflow-hidden">
             <div className="flex flex-col md:flex-row items-end md:items-start md:justify-between lg:space-x-20">
               <div className="md:min-w-[28rem] p-6 lg:p-10">
                 {/* Filters */}
@@ -46,32 +46,32 @@ export default function Features02() {
                     <button
                       className={`btn-sm px-3 py-1 shadow-sm rounded-full m-1.5 ${
                         category === '1'
-                          ? 'text-white bg-indigo-500'
-                          : 'text-slate-300 bg-slate-700 hover:bg-slate-600 border-slate-600'
+                          ? 'text-white bg-slate-800'
+                          : 'text-slate-700 bg-slate-300 hover:bg-slate-400 border-slate-400'
                       }`}
                       onClick={() => setCategory('1')}
                     >
-                      Everyone
+                      Text Detection
                     </button>
                     <button
                       className={`btn-sm px-3 py-1 shadow-sm rounded-full m-1.5 ${
                         category === '2'
-                          ? 'text-white bg-indigo-500'
-                          : 'text-slate-300 bg-slate-700 hover:bg-slate-600 border-slate-600'
+                          ? 'text-white bg-slate-800'
+                          : 'text-slate-700 bg-slate-300 hover:bg-slate-400 border-slate-400'
                       }`}
                       onClick={() => setCategory('2')}
                     >
-                      Freelancers
+                      Layout Analysis
                     </button>
                     <button
                       className={`btn-sm px-3 py-1 shadow-sm rounded-full m-1.5 ${
                         category === '3'
-                          ? 'text-white bg-indigo-500'
-                          : 'text-slate-300 bg-slate-700 hover:bg-slate-600 border-slate-600'
+                          ? 'text-white bg-slate-800'
+                          : 'text-slate-700 bg-slate-300 hover:bg-slate-400 border-slate-400'
                       }`}
                       onClick={() => setCategory('3')}
                     >
-                      Organizations
+                      Document Classification
                     </button>
                   </div>
                 </div>
@@ -79,32 +79,32 @@ export default function Features02() {
                 <div>
                   <div className={`${category !== '1' && 'hidden'}`}>
                     <h3 className="h3 font-sans mb-2">
-                      Maecenas tincidunt dapibus congue
+                      Advanced Text Detection & Recognition
                     </h3>
-                    <div className="text-lg text-slate-500">
-                      Nullam id metus risus. Proin nisl magna, sagittis quis
-                      convallis non, dapibus et erat. Sed augue metus, lacinia
-                      sit amet ultricies eget, facilisis vitae magna
+                    <div className="text-lg text-slate-600">
+                      Our YOLOv10-based system precisely identifies and extracts text from various document types. 
+                      Whether it's handwritten notes, printed text, or complex layouts, our model ensures accurate detection 
+                      with state-of-the-art performance.
                     </div>
                   </div>
                   <div className={`${category !== '2' && 'hidden'}`}>
                     <h3 className="h3 font-sans mb-2">
-                      Suspendisse felis turpis, imperdiet sit amet aliquam eget
+                      Intelligent Layout Analysis
                     </h3>
-                    <div className="text-lg text-slate-500">
-                      Nullam id metus risus. Proin nisl magna, sagittis quis
-                      convallis non, dapibus et erat. Sed augue metus, lacinia
-                      sit amet ultricies eget, facilisis vitae magna
+                    <div className="text-lg text-slate-600">
+                      Understand document structure with our advanced layout analysis. The system automatically 
+                      identifies headers, paragraphs, tables, and other structural elements, making document 
+                      processing more efficient and accurate.
                     </div>
                   </div>
                   <div className={`${category !== '3' && 'hidden'}`}>
                     <h3 className="h3 font-sans mb-2">
-                      Duis sagittis leo mi, sed varius ante sagittis id
+                      Smart Document Classification
                     </h3>
-                    <div className="text-lg text-slate-500">
-                      Nullam id metus risus. Proin nisl magna, sagittis quis
-                      convallis non, dapibus et erat. Sed augue metus, lacinia
-                      sit amet ultricies eget, facilisis vitae magna
+                    <div className="text-lg text-slate-600">
+                      Automatically categorize documents based on their content and structure. Our system can 
+                      distinguish between invoices, receipts, forms, and other document types, streamlining 
+                      your document management workflow.
                     </div>
                   </div>
                 </div>
@@ -114,7 +114,7 @@ export default function Features02() {
                 className="md:max-w-none"
                 width="480"
                 height="414"
-                alt="Feature"
+                alt="Document Analysis Feature"
               />
             </div>
           </div>

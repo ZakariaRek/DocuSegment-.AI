@@ -16,7 +16,7 @@ const projectInfo = [
     type: 'collaborator',
     name: 'Rekhla Zakaria',
     role: 'Full-Stack Developer',
-    img: '/public/1.jpg',
+    img: '/1.jpg',  // Changed from '/public/1.jpg'
     githubUrl: 'https://github.com/ZakariaRek',
     linkedinUrl: 'https://www.linkedin.com/in/zakaria-rekhla-2116a72a1/',
   },
@@ -24,7 +24,7 @@ const projectInfo = [
     type: 'collaborator',
     name: 'Hadadia Saad',
     role: 'Full-Stack Developer',
-    img: '/public/2.jpg',
+    img: '/2.jpg',  // Changed from '/public/2.jpg'
     githubUrl: 'https://github.com/SaadHadadia',
     linkedinUrl: 'https://www.linkedin.com/in/saad-hadadia-2b1686275?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
   },

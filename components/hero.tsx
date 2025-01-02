@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import HeroImage from '@/public/images/hero-image.png';
 
 export default function Hero() {
   return (
@@ -55,9 +54,9 @@ export default function Hero() {
           >
             <Image
               className="mx-auto"
-              src={HeroImage}
-              width={920}
-              height={518}
+              src="/4.png"
+              width={420}
+              height={10}
               alt="Hero"
             />
           </div>

@@ -42,7 +42,7 @@ export default function Header({ nav = true }: { nav?: boolean }) {
                 <li className="ml-3">
                   <Link
                     className="btn-sm text-white bg-indigo-500 hover:bg-indigo-600 w-full shadow-sm group"
-                    href="/signup"
+                    href="/segmentPage"
                   >
                     Get Started
                   </Link>
